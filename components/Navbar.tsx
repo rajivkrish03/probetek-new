@@ -34,6 +34,7 @@ export default function Navbar() {
                     <ul className={styles.navList}>
                         <li><Link href="/" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
                         <li><Link href="/company" onClick={() => setIsMenuOpen(false)}>Company</Link></li>
+                        <li><Link href="/services" onClick={() => setIsMenuOpen(false)}>Services</Link></li>
                         <li><Link href="/products" onClick={() => setIsMenuOpen(false)}>Products</Link></li>
                         <li><Link href="/applications" onClick={() => setIsMenuOpen(false)}>Applications</Link></li>
                         <li><Link href="/partners" onClick={() => setIsMenuOpen(false)}>Partners</Link></li>
