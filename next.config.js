@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: '/probetek',
+    basePath: '/probetek-new',
     images: {
         unoptimized: true,
     },
