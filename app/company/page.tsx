@@ -36,7 +36,7 @@ export default function Company() {
                                 </p>
                             </div>
                             <div className={styles.imageColumn}>
-                                <img src="/probetek/about_img_1.jpg" alt="Probetek Engineering Team" />
+                                <img src="/probetek-new/probetek/about_img_1.jpg" alt="Probetek Engineering Team" />
                             </div>
                         </div>
                     </FadeIn>

@@ -16,7 +16,7 @@ export default function Navbar() {
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <Link href="/">
-                        <img src="/probetek/logo.png" alt="PROBETEK" className={styles.logoImage} />
+                        <img src="/probetek-new/probetek/logo.png" alt="PROBETEK" className={styles.logoImage} />
                     </Link>
                 </div>
 
