@@ -129,8 +129,7 @@ export default function Contact() {
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.icon}><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
                                     <div>
                                         <p><strong>Sultan Bin Zayed 1st Street</strong></p>
-                                        <p>Building C39, Office 107</p>
-                                        <p>Abu Dhabi, U.A.E - P.O Box No. 6442</p>
+                                        <p>P.O Box No. 6442</p>
                                     </div>
                                 </div>
                             </div>

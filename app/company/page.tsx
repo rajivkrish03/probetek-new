@@ -16,14 +16,28 @@ export default function Company() {
             <section className={styles.content}>
                 <div className={styles.container}>
                     <FadeIn>
-                        <div className={styles.section}>
-                            <h2>Who We Are</h2>
-                            <p>
-                                <strong>Probetek Engineering</strong> is a premier provider of specialized engineering products and testing solutions based in <strong>Abu Dhabi, UAE</strong>. We serve a diverse range of industries across the Middle East, bridging the gap between global technology leaders and local market needs.
-                            </p>
-                            <p>
-                                With a commitment to excellence and innovation, we partner with world-renowned manufacturers to deliver state-of-the-art systems for <strong>Aviation Safety, Power Electronics, Environmental Testing, and Power System Protection</strong>. Our mission is to empower our clients—from industrial giants to research institutions—with the reliable, high-performance tools they need to succeed.
-                            </p>
+                        <div className={styles.aboutContent}>
+                            <div className={styles.textColumn}>
+                                <h2>About Us</h2>
+                                <p>
+                                    PROBETEK Engineering is a specialized service provider dedicated to the Oil & Gas and
+                                    Industrial sectors. With a strong foundation in engineering excellence, we deliver comprehensive
+                                    solutions for turnaround, shutdown, and critical maintenance projects.
+                                </p>
+                                <p>
+                                    Our team of professionally trained engineers ensures reliable and efficient technical
+                                    support, offering product installation, preventive maintenance, troubleshooting, and
+                                    repair services to maximize equipment performance.
+                                </p>
+                                <p>
+                                    We assist in laboratory relocation with minimal downtime, ensuring operational continuity.
+                                    Additionally, we act as consultants for laboratory setup, supporting design, planning,
+                                    and implementation to meet specific project requirements.
+                                </p>
+                            </div>
+                            <div className={styles.imageColumn}>
+                                <img src="/probetek/about_img_1.jpg" alt="Probetek Engineering Team" />
+                            </div>
                         </div>
                     </FadeIn>
 
@@ -93,20 +107,6 @@ export default function Company() {
                                     <p>From consultation and product selection to after-sales support, we are dedicated to your project's success.</p>
                                 </div>
                             </div>
-                        </div>
-                    </FadeIn>
-
-                    <FadeIn delay={0.3}>
-                        <div className={styles.section}>
-                            <h2>Industries We Serve</h2>
-                            <ul className={styles.industryList}>
-                                <li>Oil & Gas and Petrochemicals</li>
-                                <li>Aviation & Infrastructure</li>
-                                <li>Renewable Energy (Solar, EV, Hydrogen)</li>
-                                <li>Automotive & E-Mobility Manufacturing</li>
-                                <li>Power Generation & Distribution Utilities</li>
-                                <li>Research & Development Laboratories</li>
-                            </ul>
                         </div>
                     </FadeIn>
                 </div>

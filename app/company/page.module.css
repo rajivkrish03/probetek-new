@@ -182,3 +182,31 @@
     color: var(--text-muted);
     margin-bottom: 0;
 }
+
+.aboutContent {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.textColumn {
+    flex: 1;
+}
+
+.imageColumn {
+    flex: 1;
+}
+
+.imageColumn img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--glass-shadow);
+}
+
+@media (max-width: 768px) {
+    .aboutContent {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}

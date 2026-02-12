@@ -22,20 +22,16 @@ export default function Footer() {
                 </div>
                 <div className={styles.column}>
                     <h3>Contact Us</h3>
-                    <p>Building C39, Office 107</p>
                     <p>Sultan Bin Zayed 1st street</p>
                     <p>Abu Dhabi, UAE</p>
                     <p>T: +971 26265664</p>
                     <p>M: +971 585823253</p>
                     <p>Email: info@probetek.ae</p>
                 </div>
-                <div className={styles.column}>
-                    <h3>Follow Us</h3>
-                    <div className={styles.socialLinks}>
-                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><FaInstagram /></a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)"><FaXTwitter /></a>
-                        <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><FaYoutube /></a>
+                <div className={styles.social}>
+                    <h3>FOLLOW US</h3>
+                    <div className={styles.socialIcons}>
+                        <a href="https://www.linkedin.com/company/probetek/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
                     </div>
                 </div>
             </div>

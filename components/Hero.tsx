@@ -10,9 +10,7 @@ export default function Hero() {
                     <FadeIn direction="up">
                         <h1>Professional Products, Expert Services, and Cutting-Edge Solutions</h1>
                     </FadeIn>
-                    <FadeIn direction="up" delay={0.2}>
-                        <p>Helping customers achieve excellence with custom systems and expert solutions.</p>
-                    </FadeIn>
+
                     <FadeIn direction="up" delay={0.4}>
                         <div className={styles.buttonGroup}>
                             <Link href="/products" className={styles.button}>
