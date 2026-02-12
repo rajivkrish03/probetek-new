@@ -2,10 +2,10 @@ import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 
 const partners = [
-    { name: 'Clampco Sistemi', logo: '/probetek/images/partners/clampco.png', link: 'https://clampco.it/' },
-    { name: 'NGI Technologies', logo: '/probetek/images/partners/ngi.webp', link: 'https://www.ngi-tech.com/' },
-    { name: 'Sanwood', logo: '/probetek/images/partners/sanwood.png', link: 'https://www.sanwood.cc/' },
-    { name: 'Ponovo', logo: '/probetek/images/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true }
+    { name: 'Clampco Sistemi', logo: '/probetek-new/images/partners/clampco.png', link: 'https://clampco.it/' },
+    { name: 'NGI Technologies', logo: '/probetek-new/images/partners/ngi.webp', link: 'https://www.ngi-tech.com/' },
+    { name: 'Sanwood', logo: '/probetek-new/images/partners/sanwood.png', link: 'https://www.sanwood.cc/' },
+    { name: 'Ponovo', logo: '/probetek-new/images/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true },
 ];
 
 export default function Partners() {
