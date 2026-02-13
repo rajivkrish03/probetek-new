@@ -112,6 +112,10 @@ export default function Company() {
                                     <h3>End-to-End Support</h3>
                                     <p>From consultation and product selection to after-sales support, we are dedicated to your project's success.</p>
                                 </div>
+                                <div className={styles.valueCard}>
+                                    <h3>ICV Certified</h3>
+                                    <p>We are a certified In-Country Value (ICV) partner, supporting the UAE's economic growth and localization goals.</p>
+                                </div>
                             </div>
                         </div>
                     </FadeIn>
