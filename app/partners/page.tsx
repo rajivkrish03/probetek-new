@@ -3,7 +3,7 @@ import FadeIn from '@/components/FadeIn';
 
 const partners = [
 
-    { name: 'NGI', logo: '/probetek/partners/ngi.png', link: 'https://www.ngi-test.com/', darkBg: true },
+    { name: 'NGI', logo: '/probetek/partners/ngi.webp', link: 'https://www.ngi-test.com/', darkBg: true },
     { name: 'Sanwood', logo: '/probetek/partners/sanwood.png', link: 'https://www.sanwood.cc/', darkBg: true },
     { name: 'Ponovo', logo: '/probetek/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true },
 ];

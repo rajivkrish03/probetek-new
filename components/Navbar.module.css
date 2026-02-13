@@ -29,8 +29,9 @@
     align-items: center;
 }
 
-.logoImage {
+.logo img {
     height: 60px;
+    /* Reduced from default or auto */
     width: auto;
     object-fit: contain;
 }

@@ -10,35 +10,35 @@ const categories = [
     {
         id: 'power-electronics',
         title: 'Power Electronics Test Solutions',
-        image: '/probetek/product_cat_1.jpg',
+        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Power+Electronics',
         description: 'Advanced testing solutions for power supplies, batteries, and electronic loads.',
         link: '/products#power-electronics'
     },
     {
         id: 'environmental-test',
         title: 'Environmental Test Chambers',
-        image: '/probetek/product_cat_2.jpg',
+        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Environmental+Chambers',
         description: 'Reliable climatic testing chambers for temperature, humidity, and vibration.',
         link: '/products#environmental-test'
     },
     {
         id: 'modular-instruments',
         title: 'Modular Instruments / Cards',
-        image: '/probetek/product_cat_3.jpg',
+        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Modular+Instruments',
         description: 'High-precision modular instrumentation for flexible test configurations.',
         link: '/products#modular-instruments'
     },
     {
         id: 'electric-power-system-testing',
         title: 'Electric Power System Testing',
-        image: '/probetek/product_cat_4.jpg',
+        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Electric+Power+System',
         description: 'Comprehensive testing solutions for IEC61850 Digital Substation, Relay, and Protection.',
         link: '/products#electric-power-system-testing'
     },
     {
         id: 'aircraft-warning-lights',
         title: 'Aircraft Warning Lights',
-        image: '/probetek/product_cat_5.jpg',
+        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Aircraft+Warning+Lights',
         description: 'Obstruction lights for hazardous areas, tall buildings, and heliports.',
         link: '/products#aircraft-warning-lights'
     },
