@@ -53,6 +53,20 @@ export const metadata: Metadata = {
             'max-snippet': -1,
         },
     },
+    icons: {
+        icon: [
+            { url: '/favicon.ico' },
+            { url: '/logo.png', type: 'image/png' },
+        ],
+        shortcut: '/favicon.ico',
+        apple: '/logo.png',
+        other: [
+            {
+                rel: 'apple-touch-icon-precomposed',
+                url: '/logo.png',
+            },
+        ],
+    },
 }
 
 export default function RootLayout({
