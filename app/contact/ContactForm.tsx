@@ -38,9 +38,12 @@ export default function ContactForm() {
         }
 
         try {
-            const response = await fetch('/api/contact', {
+            const response = await fetch('https://formspree.io/f/mreapyaa', {
                 method: 'POST',
                 body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
             });
 
             if (response.ok) {
@@ -48,6 +51,8 @@ export default function ContactForm() {
                 setFormData({ name: '', email: '', subject: '', message: '' });
                 setFile(null);
             } else {
+                const result = await response.json();
+                console.error('Formspree Error:', result);
                 setStatus('error');
             }
         } catch (error) {
