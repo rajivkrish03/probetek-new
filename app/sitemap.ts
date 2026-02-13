@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next'
 export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-    const baseUrl = 'https://rajivkrish03.github.io/probetek-new'
+    const baseUrl = 'https://probetek.ae';
 
     return [
         {

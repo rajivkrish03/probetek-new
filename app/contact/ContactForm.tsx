@@ -38,7 +38,7 @@ export default function ContactForm() {
         }
 
         try {
-            const response = await fetch('/probetek-new/api/contact', {
+            const response = await fetch('/api/contact', {
                 method: 'POST',
                 body: data,
             });

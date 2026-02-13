@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: '/private/',
         },
-        sitemap: 'https://rajivkrish03.github.io/probetek-new/sitemap.xml',
+        sitemap: 'https://probetek.ae/sitemap.xml',
     }
 }

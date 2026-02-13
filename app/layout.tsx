@@ -7,7 +7,10 @@ import Footer from '@/components/Footer'
 const montserrat = Montserrat({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://rajivkrish03.github.io/probetek-new'),
+    metadataBase: new URL('https://probetek.ae'),
+    alternates: {
+        canonical: '/',
+    },
     title: {
         default: 'Probetek Engineering | Advanced Research Equipment & Industrial Solutions',
         template: '%s | Probetek Engineering',
@@ -20,7 +23,7 @@ export const metadata: Metadata = {
     openGraph: {
         type: 'website',
         locale: 'en_US',
-        url: 'https://rajivkrish03.github.io/probetek-new',
+        url: 'https://probetek.ae',
         title: 'Probetek Engineering | Advanced Research Equipment & Industrial Solutions',
         description: 'Delivering value, precision, and reliability in academic and industrial research equipment.',
         siteName: 'Probetek Engineering',

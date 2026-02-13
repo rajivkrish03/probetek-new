@@ -6,7 +6,7 @@ export const metadata = {
     title: 'Probetek Engineering | Leading Engineering Solutions in UAE',
     description: 'Probetek Engineering provides advanced academic and industrial research equipment, power electronics test solutions, and environmental chambers in Abu Dhabi, UAE.',
     alternates: {
-        canonical: 'https://rajivkrish03.github.io/probetek-new',
+        canonical: 'https://probetek.ae',
     },
 }
 
@@ -15,8 +15,8 @@ export default function Home() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'Probetek Engineering',
-        url: 'https://rajivkrish03.github.io/probetek-new',
-        logo: 'https://rajivkrish03.github.io/probetek-new/probetek/logo.png',
+        url: 'https://probetek.ae',
+        logo: 'https://probetek.ae/probetek/logo.png',
         sameAs: [
             'https://www.linkedin.com/company/probetek-engineering',
         ],

@@ -7,27 +7,40 @@ import FadeIn from './FadeIn';
 import StaggerContainer from './StaggerContainer';
 
 const categories = [
-    /* {
-        id: 'aircraft-warning-lights',
-        title: 'Aircraft Warning Lights',
-        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Aircraft+Warning+Lights',
-        description: 'Obstruction lights for hazardous areas, tall buildings, and heliports.',
-    }, */
     {
         id: 'power-electronics',
         title: 'Power Electronics Test Solutions',
-        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Power+Electronics',
-        description: 'AC/DC power sources, loads, and battery simulators.',
+        image: '/probetek/product_cat_1.jpg',
+        description: 'Advanced testing solutions for power supplies, batteries, and electronic loads.',
+        link: '/products#power-electronics'
     },
     {
-        id: 'environmental-chambers',
-        title: 'Environmental Chambers',
-        description: 'Climatic test chambers for temperature, humidity, and aging tests.',
+        id: 'environmental-test',
+        title: 'Environmental Test Chambers',
+        image: '/probetek/product_cat_2.jpg',
+        description: 'Reliable climatic testing chambers for temperature, humidity, and vibration.',
+        link: '/products#environmental-test'
+    },
+    {
+        id: 'modular-instruments',
+        title: 'Modular Instruments / Cards',
+        image: '/probetek/product_cat_3.jpg',
+        description: 'High-precision modular instrumentation for flexible test configurations.',
+        link: '/products#modular-instruments'
     },
     {
         id: 'electric-power-system-testing',
-        title: 'Electric power system testing',
-        description: 'IEC61850 Digital Substation, Relay, and Protection Testing.',
+        title: 'Electric Power System Testing',
+        image: '/probetek/product_cat_4.jpg',
+        description: 'Comprehensive testing solutions for IEC61850 Digital Substation, Relay, and Protection.',
+        link: '/products#electric-power-system-testing'
+    },
+    {
+        id: 'aircraft-warning-lights',
+        title: 'Aircraft Warning Lights',
+        image: '/probetek/product_cat_5.jpg',
+        description: 'Obstruction lights for hazardous areas, tall buildings, and heliports.',
+        link: '/products#aircraft-warning-lights'
     },
 ];
 

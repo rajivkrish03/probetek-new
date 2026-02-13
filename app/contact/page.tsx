@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     title: 'Contact Us | Probetek Engineering',
     description: 'Get in touch with Probetek Engineering for your academic and industrial research equipment needs in Abu Dhabi, UAE.',
     alternates: {
-        canonical: 'https://rajivkrish03.github.io/probetek-new/contact',
+        canonical: 'https://probetek.ae/contact',
     },
 };
 

@@ -2,10 +2,10 @@ import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 
 const partners = [
-    // { name: 'Clampco Sistemi', logo: '/probetek-new/images/partners/clampco.png', link: 'https://clampco.it/' },
-    { name: 'NGI Technologies', logo: '/probetek-new/images/partners/ngi.webp', link: 'https://www.ngi-tech.com/' },
-    { name: 'Sanwood', logo: '/probetek-new/images/partners/sanwood.png', link: 'https://www.sanwood.cc/' },
-    { name: 'Ponovo', logo: '/probetek-new/images/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true },
+
+    { name: 'NGI', logo: '/probetek/partners/ngi.png', link: 'https://www.ngi-test.com/', darkBg: true },
+    { name: 'Sanwood', logo: '/probetek/partners/sanwood.png', link: 'https://www.sanwood.cc/', darkBg: true },
+    { name: 'Ponovo', logo: '/probetek/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true },
 ];
 
 
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: 'Our Partners | Probetek Engineering',
     description: 'We partner with industry leaders like NGI, Sanwood, and Ponovo to bring world-class engineering technology to the UAE.',
     alternates: {
-        canonical: 'https://rajivkrish03.github.io/probetek-new/partners',
+        canonical: 'https://probetek.ae/partners',
     },
 };
 
