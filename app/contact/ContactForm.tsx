@@ -34,7 +34,7 @@ export default function ContactForm() {
         data.append('subject', formData.subject);
         data.append('message', formData.message);
         if (file) {
-            data.append('file', file);
+            data.append('upload', file);
         }
 
         try {
@@ -90,8 +90,8 @@ export default function ContactForm() {
                             <textarea id="message" name="message" rows={5} placeholder="Your Message" value={formData.message} onChange={handleChange} required></textarea>
                         </div>
                         <div className={styles.formGroup}>
-                            <label htmlFor="file">Attachment (Optional)</label>
-                            <input type="file" id="file" name="file" onChange={handleFileChange} className={styles.fileInput} />
+                            <label htmlFor="upload">Attachment (Optional)</label>
+                            <input type="file" id="upload" name="upload" onChange={handleFileChange} className={styles.fileInput} />
                         </div>
                         <button type="submit" className={styles.submitButton} disabled={status === 'submitting'}>
                             {status === 'submitting' ? 'Sending...' : 'Send Message'}
