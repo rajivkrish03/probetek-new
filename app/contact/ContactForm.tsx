@@ -10,7 +10,7 @@ export default function ContactForm() {
         subject: '',
         message: '',
     });
-    const [file, setFile] = useState<File | null>(null);
+
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -18,11 +18,7 @@ export default function ContactForm() {
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleFileChange = (e: ChangeEvent<HTMLInputElement>) => {
-        if (e.target.files && e.target.files[0]) {
-            setFile(e.target.files[0]);
-        }
-    };
+
 
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
@@ -33,9 +29,7 @@ export default function ContactForm() {
         data.append('email', formData.email);
         data.append('subject', formData.subject);
         data.append('message', formData.message);
-        if (file) {
-            data.append('upload', file);
-        }
+
 
         try {
             const response = await fetch('https://formspree.io/f/mreapyaa', {
@@ -49,7 +43,7 @@ export default function ContactForm() {
             if (response.ok) {
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: '', message: '' });
-                setFile(null);
+
             } else {
                 const result = await response.json();
                 console.error('Formspree Error:', result);
@@ -89,10 +83,7 @@ export default function ContactForm() {
                             <label htmlFor="message">Message</label>
                             <textarea id="message" name="message" rows={5} placeholder="Your Message" value={formData.message} onChange={handleChange} required></textarea>
                         </div>
-                        <div className={styles.formGroup}>
-                            <label htmlFor="upload">Attachment (Optional)</label>
-                            <input type="file" id="upload" name="upload" onChange={handleFileChange} className={styles.fileInput} />
-                        </div>
+
                         <button type="submit" className={styles.submitButton} disabled={status === 'submitting'}>
                             {status === 'submitting' ? 'Sending...' : 'Send Message'}
                         </button>
