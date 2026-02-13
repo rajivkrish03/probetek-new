@@ -21,26 +21,33 @@ const categories = [
         description: 'Reliable climatic testing chambers for temperature, humidity, and vibration.',
         link: '/products#environmental-test'
     },
-    {
-        id: 'modular-instruments',
-        title: 'Modular Instruments / Cards',
-        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Modular+Instruments',
-        description: 'High-precision modular instrumentation for flexible test configurations.',
-        link: '/products#modular-instruments'
-    },
+    /*     {
+            id: 'modular-instruments',
+            title: 'Modular Instruments / Cards',
+            image: 'https://placehold.co/600x400/1a2533/ffffff?text=Modular+Instruments',
+            description: 'High-precision modular instrumentation for flexible test configurations.',
+            link: '/products#modular-instruments'
+        },
+        {
+            id: 'electric-power-system-testing',
+            title: 'Electric Power System Testing',
+            image: 'https://placehold.co/600x400/1a2533/ffffff?text=Electric+Power+System',
+            description: 'Comprehensive testing solutions for IEC61850 Digital Substation, Relay, and Protection.',
+            link: '/products#electric-power-system-testing'
+        },
+        {
+            id: 'aircraft-warning-lights',
+            title: 'Aircraft Warning Lights',
+            image: 'https://placehold.co/600x400/1a2533/ffffff?text=Aircraft+Warning+Lights',
+            description: 'Obstruction lights for hazardous areas, tall buildings, and heliports.',
+            link: '/products#aircraft-warning-lights'
+        }, */
     {
         id: 'electric-power-system-testing',
         title: 'Electric Power System Testing',
         image: 'https://placehold.co/600x400/1a2533/ffffff?text=Electric+Power+System',
         description: 'Comprehensive testing solutions for IEC61850 Digital Substation, Relay, and Protection.',
         link: '/products#electric-power-system-testing'
-    },
-    {
-        id: 'aircraft-warning-lights',
-        title: 'Aircraft Warning Lights',
-        image: 'https://placehold.co/600x400/1a2533/ffffff?text=Aircraft+Warning+Lights',
-        description: 'Obstruction lights for hazardous areas, tall buildings, and heliports.',
-        link: '/products#aircraft-warning-lights'
     },
 ];
 
