@@ -2,7 +2,7 @@ import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 
 const products = [
-    {
+    /* {
         category: 'Aircraft Warning Lights (Obstruction Lights)',
         id: 'aircraft-warning-lights',
         items: [
@@ -14,7 +14,7 @@ const products = [
             { name: 'Retractable Maintenance Solution (Retractable Aircraft warning light system)', link: 'https://clampco.it/retractable-lighting-maintenance-solution/' },
             { name: 'Telemetry Monitoring Solution (Remote Control and Monitoring)', link: 'https://clampco.it/telemetry-lighting-monitoring-system/' }
         ]
-    },
+    }, */
     {
         category: 'Power Electronics Test Solutions',
         id: 'power-electronics',

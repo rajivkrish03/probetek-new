@@ -7,12 +7,12 @@ import FadeIn from './FadeIn';
 import StaggerContainer from './StaggerContainer';
 
 const categories = [
-    {
+    /* {
         id: 'aircraft-warning-lights',
         title: 'Aircraft Warning Lights',
         image: 'https://placehold.co/600x400/1a2533/ffffff?text=Aircraft+Warning+Lights',
         description: 'Obstruction lights for hazardous areas, tall buildings, and heliports.',
-    },
+    }, */
     {
         id: 'power-electronics',
         title: 'Power Electronics Test Solutions',

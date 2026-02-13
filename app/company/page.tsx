@@ -20,19 +20,18 @@ export default function Company() {
                             <div className={styles.textColumn}>
                                 <h2>About Us</h2>
                                 <p>
-                                    PROBETEK Engineering is a specialized service provider dedicated to the Oil & Gas and
-                                    Industrial sectors. With a strong foundation in engineering excellence, we deliver comprehensive
-                                    solutions for turnaround, shutdown, and critical maintenance projects.
+                                    Probe Tek Engineering specializes in delivering advanced academic and industrial
+                                    research equipment that empowers innovation and drives results. With over a decade of
+                                    proven expertise, our technically qualified team provides solutions that go far beyond
+                                    standard product supply — we deliver value, precision, and reliability.
                                 </p>
                                 <p>
-                                    Our team of professionally trained engineers ensures reliable and efficient technical
-                                    support, offering product installation, preventive maintenance, troubleshooting, and
-                                    repair services to maximize equipment performance.
+                                    Our diverse portfolio serves multiple industries and specialized applications, offering
+                                    tailored solutions for complex challenges.
                                 </p>
                                 <p>
-                                    We assist in laboratory relocation with minimal downtime, ensuring operational continuity.
-                                    Additionally, we act as consultants for laboratory setup, supporting design, planning,
-                                    and implementation to meet specific project requirements.
+                                    At Probetek, our mission is simple: to provide professional products, expert services,
+                                    and cutting-edge solutions that help you achieve excellence.
                                 </p>
                             </div>
                             <div className={styles.imageColumn}>
@@ -46,7 +45,7 @@ export default function Company() {
                             <h2>Our Core Expertise</h2>
                             <p>We specialize in four key technology domains, offering comprehensive sales, support, and consultancy:</p>
                             <div className={styles.expertiseGrid}>
-                                <div className={styles.expertiseCard}>
+                                {/* <div className={styles.expertiseCard}>
                                     <h3>Aviation & Obstruction Lighting</h3>
                                     <p>Ensuring safety and compliance for tall structures and heliports. We supply <strong>Clampco Sistemi</strong> solutions, including:</p>
                                     <ul>
@@ -55,7 +54,7 @@ export default function Company() {
                                         <li>Heliport & Vertiport Lighting Systems</li>
                                         <li>Solar-Powered & Retractable Solutions</li>
                                     </ul>
-                                </div>
+                                </div> */}
                                 <div className={styles.expertiseCard}>
                                     <h3>Power Electronics Test Solutions</h3>
                                     <p>Advanced testing for the electric future. Partnering with <strong>NGI Technologies</strong>, we provide:</p>
