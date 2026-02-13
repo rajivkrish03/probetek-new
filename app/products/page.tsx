@@ -65,6 +65,17 @@ const products = [
     }
 ];
 
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Products | Probetek Engineering',
+    description: 'Explore our range of research equipment, including power electronics test solutions, environmental chambers, and modular instruments.',
+    alternates: {
+        canonical: 'https://rajivkrish03.github.io/probetek-new/products',
+    },
+};
+
 export default function Products() {
     return (
         <main className={styles.main}>

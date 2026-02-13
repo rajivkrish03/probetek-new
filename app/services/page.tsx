@@ -50,6 +50,17 @@ const services = [
     }
 ];
 
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Services | Probetek Engineering',
+    description: 'Expert engineering services including installation, commissioning, maintenance, and laboratory relocation in Abu Dhabi, UAE.',
+    alternates: {
+        canonical: 'https://rajivkrish03.github.io/probetek-new/services',
+    },
+};
+
 export default function Services() {
     return (
         <main className={styles.container}>

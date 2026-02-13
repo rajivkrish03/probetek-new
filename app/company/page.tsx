@@ -1,6 +1,16 @@
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'About Us | Probetek Engineering',
+    description: 'Learn about Probetek Engineering, a specialized service provider for Oil & Gas and Industrial sectors offering turnaround, shutdown, and critical maintenance solutions in UAE.',
+    alternates: {
+        canonical: 'https://rajivkrish03.github.io/probetek-new/company',
+    },
+};
+
 export default function Company() {
     return (
         <main className={styles.main}>

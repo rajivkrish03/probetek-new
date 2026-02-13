@@ -8,6 +8,17 @@ const partners = [
     { name: 'Ponovo', logo: '/probetek-new/images/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true },
 ];
 
+
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: 'Our Partners | Probetek Engineering',
+    description: 'We partner with industry leaders like NGI, Sanwood, and Ponovo to bring world-class engineering technology to the UAE.',
+    alternates: {
+        canonical: 'https://rajivkrish03.github.io/probetek-new/partners',
+    },
+};
+
 export default function Partners() {
     return (
         <main className={styles.main}>
