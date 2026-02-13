@@ -95,7 +95,7 @@ export default function Company() {
                             <div className={styles.valuesGrid}>
                                 <div className={styles.valueCard}>
                                     <h3>Global Partnerships</h3>
-                                    <p>We represent industry leaders like <strong>Clampco, NGI, Sanwood, and Ponovo</strong>, bringing world-class technology to your doorstep.</p>
+                                    <p>We represent industry leaders like <strong>NGI, Sanwood, and Ponovo</strong>, bringing world-class technology to your doorstep.</p>
                                 </div>
                                 <div className={styles.valueCard}>
                                     <h3>Local Expertise</h3>
