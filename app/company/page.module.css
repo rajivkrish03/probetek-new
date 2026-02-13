@@ -184,18 +184,19 @@
 }
 
 .aboutContent {
-    display: flex;
-    gap: 4rem;
-    align-items: center;
-    /* Align items to the top to prevent stretching */
-    margin-bottom: 6rem;
-    /* Increased margin for better separation */
+    display: block;
+    /* Changed from flex to block since there is only one column now */
+    max-width: 900px;
+    /* Limit width for readability */
+    margin: 0 auto 6rem auto;
+    /* Center the container */
     background: var(--glass-bg);
-    /* Add subtle background */
     padding: 3rem;
     border-radius: 16px;
     border: 1px solid var(--glass-border);
     box-shadow: var(--glass-shadow);
+    text-align: center;
+    /* Center text alignment */
 }
 
 .textColumn {

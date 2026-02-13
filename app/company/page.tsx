@@ -30,7 +30,7 @@ export default function Company() {
                             <div className={styles.textColumn}>
                                 <h2>About Us</h2>
                                 <p>
-                                    Probe Tek Engineering specializes in delivering advanced academic and industrial
+                                    Probetek Engineering specializes in delivering advanced academic and industrial
                                     research equipment that empowers innovation and drives results. With over a decade of
                                     proven expertise, our technically qualified team provides solutions that go far beyond
                                     standard product supply — we deliver value, precision, and reliability.
@@ -43,9 +43,6 @@ export default function Company() {
                                     At Probetek, our mission is simple: to provide professional products, expert services,
                                     and cutting-edge solutions that help you achieve excellence.
                                 </p>
-                            </div>
-                            <div className={styles.imageColumn}>
-                                <img src="/probetek-new/probetek/about_img_1.jpg" alt="Probetek Engineering Team" />
                             </div>
                         </div>
                     </FadeIn>
