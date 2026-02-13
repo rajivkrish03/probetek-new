@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Montserrat } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import Script from 'next/script'
 
 const montserrat = Montserrat({ subsets: ['latin'] })
 
@@ -56,14 +57,14 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             { url: '/favicon.ico' },
-            { url: '/logo.png', type: 'image/png' },
+            { url: '/logo-icon.png', type: 'image/png' },
         ],
         shortcut: '/favicon.ico',
-        apple: '/logo.png',
+        apple: '/logo-icon.png',
         other: [
             {
                 rel: 'apple-touch-icon-precomposed',
-                url: '/logo.png',
+                url: '/logo-icon.png',
             },
         ],
     },
@@ -76,6 +77,21 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" suppressHydrationWarning>
+            <head>
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-JRFF0K40RS"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+
+                        gtag('config', 'G-JRFF0K40RS');
+                    `}
+                </Script>
+            </head>
             <body className={montserrat.className}>
                 <Navbar />
                 {children}
