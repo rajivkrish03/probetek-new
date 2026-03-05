@@ -6,6 +6,7 @@ const partners = [
     { name: 'NGI', logo: '/probetek/partners/ngi.webp', link: 'https://www.ngi-tech.com/', darkBg: true },
     { name: 'Sanwood', logo: '/probetek/partners/sanwood.png', link: 'https://www.sanwood.cc/', darkBg: true },
     { name: 'Ponovo', logo: '/probetek/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true },
+    { name: 'PE Module', logo: '/probetek/partners/pemodule.png', link: 'https://www.pemodule.com/', darkBg: true },
 ];
 
 
