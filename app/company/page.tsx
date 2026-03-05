@@ -50,18 +50,8 @@ export default function Company() {
                     <FadeIn delay={0.1}>
                         <div className={styles.section}>
                             <h2>Our Core Expertise</h2>
-                            <p>We specialize in four key technology domains, offering comprehensive sales, support, and consultancy:</p>
+                            <p>We specialize in five key technology domains, offering comprehensive sales, support, and consultancy:</p>
                             <div className={styles.expertiseGrid}>
-                                {/* <div className={styles.expertiseCard}>
-                                    <h3>Aviation & Obstruction Lighting</h3>
-                                    <p>Ensuring safety and compliance for tall structures and heliports. We supply <strong>Clampco Sistemi</strong> solutions, including:</p>
-                                    <ul>
-                                        <li>Aircraft Warning Lights (Low, Medium, High Intensity)</li>
-                                        <li>Explosion-Proof Lights for Oil & Gas</li>
-                                        <li>Heliport & Vertiport Lighting Systems</li>
-                                        <li>Solar-Powered & Retractable Solutions</li>
-                                    </ul>
-                                </div> */}
                                 <div className={styles.expertiseCard}>
                                     <h3>Power Electronics Test Solutions</h3>
                                     <p>Advanced testing for the electric future. Partnering with <strong>NGI Technologies</strong>, we provide:</p>
@@ -90,6 +80,26 @@ export default function Company() {
                                         <li>Relay Protection & Primary Injection Testing</li>
                                         <li>EV Charging Station Testing</li>
                                         <li>HVDC & Railway Power Testing</li>
+                                    </ul>
+                                </div>
+                                <div className={styles.expertiseCard}>
+                                    <h3>Power Electronics Research Products</h3>
+                                    <p>Empowering breakthrough research. In partnership with <strong>PE Module</strong>, we provide:</p>
+                                    <ul>
+                                        <li>PLUGY HP Power Modules & Control Boards</li>
+                                        <li>Modular Converters (Buck, Boost, Inverters)</li>
+                                        <li>Micro-grid Research Systems</li>
+                                        <li>Customizable R&D Test Benches</li>
+                                    </ul>
+                                </div>
+                                <div className={styles.expertiseCard}>
+                                    <h3>Power Electronics Educational Products</h3>
+                                    <p>Building future engineering talent. Dedicated educational tools from <strong>PE Module</strong>:</p>
+                                    <ul>
+                                        <li>Integrated Power Electronics Training Kits</li>
+                                        <li>Modular Educational Discovery Systems</li>
+                                        <li>Hands-on Curriculum Support</li>
+                                        <li>Safe, Industry-aligned Learning Platforms</li>
                                     </ul>
                                 </div>
                             </div>
