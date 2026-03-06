@@ -1,7 +1,10 @@
+'use client';
+
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
 import { productsData } from './data';
 import Link from 'next/link';
+import ProductSearch from '@/components/ProductSearch';
 
 export default function Products() {
     return (
@@ -11,6 +14,9 @@ export default function Products() {
                     <FadeIn>
                         <h1>Our Products</h1>
                         <p>Comprehensive solutions for industrial and research applications.</p>
+                        <div style={{ marginTop: '2rem' }}>
+                            <ProductSearch />
+                        </div>
                     </FadeIn>
                 </div>
             </section>
