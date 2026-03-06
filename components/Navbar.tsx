@@ -16,13 +16,13 @@ export default function Navbar() {
         <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.logo}>
-                    <Link href="/" className={styles.logoLink}>
+                    <Link href="/" className={styles.logo}>
                         <Image
                             src="/probetek/logo.png"
                             alt="Probetek Engineering Corporate Logo"
                             width={200}
                             height={60}
-                            style={{ objectFit: 'contain', width: 'auto', height: '52px' }}
+                            style={{ objectFit: 'contain', width: 'auto', height: '60px' }}
                             priority
                         />
                     </Link>
@@ -48,9 +48,6 @@ export default function Navbar() {
                         <li><Link href="/partners" onClick={() => setIsMenuOpen(false)}>Partners</Link></li>
                         <li><Link href="/contact" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
                     </ul>
-                    <Link href="/contact" className={styles.quoteBtn} onClick={() => setIsMenuOpen(false)}>
-                        Request Quote
-                    </Link>
                 </nav>
             </div>
         </header>
