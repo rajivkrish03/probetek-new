@@ -6,7 +6,6 @@ import styles from './ProductCategories.module.css';
 import FadeIn from './FadeIn';
 import StaggerContainer from './StaggerContainer';
 import { productsData } from '@/app/products/data';
-import ProductSearch from './ProductSearch';
 
 const cardVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -24,9 +23,6 @@ export default function ProductCategories() {
                         <p className={styles.subheading}>
                             Providing state-of-the-art solutions for industrial testing, research, and education.
                         </p>
-                        <div style={{ marginTop: '2rem' }}>
-                            <ProductSearch />
-                        </div>
                     </div>
                 </FadeIn>
                 <StaggerContainer className={styles.grid}>
