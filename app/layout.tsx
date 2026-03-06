@@ -1,11 +1,12 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Manrope, DM_Sans } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Script from 'next/script'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope', display: 'swap' })
+const dmSans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans', display: 'swap' })
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://probetek.ae'),
@@ -92,7 +93,7 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <body className={montserrat.className}>
+            <body className={`${manrope.variable} ${dmSans.variable}`}>
                 <Navbar />
                 {children}
                 <Footer />

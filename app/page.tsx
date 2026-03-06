@@ -1,6 +1,6 @@
 import Hero from '@/components/Hero';
 import ProductCategories from '@/components/ProductCategories';
-
+import WhyProbetek from '@/components/WhyProbetek';
 
 export const metadata = {
     title: 'Probetek Engineering | Leading Engineering Solutions in UAE',
@@ -36,6 +36,7 @@ export default function Home() {
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <Hero />
+            <WhyProbetek />
             <ProductCategories />
         </main>
     )

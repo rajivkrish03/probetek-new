@@ -1,14 +1,14 @@
 .header {
-    background-color: var(--glass-bg);
-    backdrop-filter: blur(var(--glass-blur));
-    -webkit-backdrop-filter: blur(var(--glass-blur));
-    color: var(--text-color);
+    background-color: #0A1628;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid var(--glass-border);
-    box-shadow: var(--glass-shadow);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     transition: all 0.3s ease;
@@ -24,20 +24,21 @@
     align-items: center;
 }
 
-.logo a {
+.logo {
     display: flex;
     align-items: center;
 }
 
-.logo img {
-    height: 60px;
-    /* Reduced from default or auto */
-    width: auto;
-    object-fit: contain;
+.logoLink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
 }
 
 .nav {
     display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .navList {
@@ -49,9 +50,10 @@
 }
 
 .navList li a {
-    font-size: 0.9rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
     font-weight: 600;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.7);
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: all 0.3s ease;
@@ -60,8 +62,7 @@
 }
 
 .navList li a:hover {
-    color: var(--accent-color);
-    text-shadow: 0 0 8px var(--accent-glow);
+    color: #00D9FF;
 }
 
 .navList li a::after {
@@ -71,13 +72,34 @@
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color: var(--accent-color);
+    background: linear-gradient(90deg, #0066FF, #00D9FF);
     transition: width 0.3s ease;
-    box-shadow: 0 0 8px var(--accent-glow);
 }
 
 .navList li a:hover::after {
     width: 100%;
+}
+
+.quoteBtn {
+    display: inline-block;
+    padding: 10px 22px;
+    background: linear-gradient(135deg, #0066FF 0%, #00D9FF 100%);
+    color: #ffffff !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(0, 102, 255, 0.35);
+    letter-spacing: 0.01em;
+}
+
+.quoteBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 102, 255, 0.5);
+    color: #ffffff !important;
 }
 
 /* Hamburger Menu */
