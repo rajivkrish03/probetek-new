@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -16,7 +17,14 @@ export default function Navbar() {
             <div className={styles.container}>
                 <div className={styles.logo}>
                     <Link href="/" className={styles.logo}>
-                        <img src="/probetek/logo.png" alt="Probetek Engineering" />
+                        <Image
+                            src="/probetek/logo.png"
+                            alt="Probetek Engineering Corporate Logo"
+                            width={200}
+                            height={60}
+                            style={{ objectFit: 'contain', width: 'auto', height: '60px' }}
+                            priority
+                        />
                     </Link>
                 </div>
 

@@ -28,7 +28,11 @@ export default function ProductCategories() {
                 <StaggerContainer className={styles.grid}>
                     {productsData.map((category) => (
                         <motion.div key={category.id} variants={cardVariants} className={styles.cardWrapper}>
-                            <Link href={`/products/${category.id}`} className={styles.cardLink}>
+                            <Link
+                                href={`/products/${category.id}`}
+                                className={styles.cardLink}
+                                aria-label={`View ${category.category} products`}
+                            >
                                 <div className={styles.card}>
                                     <div className={styles.iconWrapper}>
                                         <span className={styles.icon}>{category.icon}</span>

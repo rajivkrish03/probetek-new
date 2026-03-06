@@ -1,4 +1,4 @@
-import { productsData, getProductCategory } from '../data';
+import { productsData, getProductCategory, type ProductCategory } from '../data';
 import styles from '../page.module.css';
 import FadeIn from '@/components/FadeIn';
 import { notFound } from 'next/navigation';
@@ -11,7 +11,11 @@ export function generateStaticParams() {
     }));
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ categoryId: string }> }) {
+type Props = {
+    params: Promise<{ categoryId: string }>;
+};
+
+export async function generateMetadata({ params }: Props) {
     const { categoryId } = await params;
     const category = getProductCategory(categoryId);
     if (!category) return { title: 'Not Found' };
@@ -22,16 +26,47 @@ export async function generateMetadata({ params }: { params: Promise<{ categoryI
     };
 }
 
-export default async function CategoryPage({ params }: { params: Promise<{ categoryId: string }> }) {
+export default async function CategoryPage({ params }: Props) {
     const { categoryId } = await params;
-    const category = getProductCategory(categoryId);
+    const categoryData: ProductCategory | undefined = getProductCategory(categoryId);
 
-    if (!category) {
+    if (!categoryData) {
         notFound();
     }
 
+    const { category, description, items } = categoryData;
+
+    const jsonLd = {
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+            {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://probetek.ae/'
+            },
+            {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Products',
+                item: 'https://probetek.ae/products'
+            },
+            {
+                '@type': 'ListItem',
+                position: 3,
+                name: category,
+                item: `https://probetek.ae/products/${categoryId}`
+            }
+        ]
+    };
+
     return (
         <main className={styles.main}>
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             <section className={styles.heroSmall}>
                 <div className={styles.container}>
                     <FadeIn>
@@ -39,19 +74,19 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                             <Link href="/products" className={styles.backLink}>&larr; Back to all categories</Link>
                         </div>
                         <h1 className={styles.categoryPageTitle}>
-                            <span className={styles.titleIcon}>{category.icon}</span>
-                            {category.category}
+                            <span className={styles.titleIcon}>{categoryData.icon}</span>
+                            {category}
                         </h1>
-                        <p className={styles.categoryPageDesc}>{category.description}</p>
+                        <p className={styles.categoryPageDesc}>{description}</p>
                     </FadeIn>
                 </div>
             </section>
 
             <div className={styles.container}>
                 <section className={styles.categorySection}>
-                    {category.items.length > 0 ? (
+                    {items.length > 0 ? (
                         <div className={styles.grid}>
-                            {category.items.map((item, index) => (
+                            {items.map((item, index) => (
                                 <FadeIn key={index} delay={index * 0.05}>
                                     <a href={item.link} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
                                         <div className={styles.card}>

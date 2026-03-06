@@ -1,5 +1,6 @@
 import styles from './page.module.css';
 import FadeIn from '@/components/FadeIn';
+import Image from 'next/image';
 
 const partners = [
 
@@ -40,7 +41,14 @@ export default function Partners() {
                                 <a href={partner.link} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
                                     <div className={styles.card}>
                                         <div className={`${styles.logoContainer} ${partner.darkBg ? styles.darkBg : ''}`}>
-                                            <img src={partner.logo} alt={partner.name} className={styles.logo} />
+                                            <Image
+                                                src={partner.logo}
+                                                alt={`${partner.name} Corporate Logo`}
+                                                width={200}
+                                                height={100}
+                                                className={styles.logo}
+                                                style={{ objectFit: 'contain' }}
+                                            />
                                         </div>
                                         <h2 className={styles.partnerName}>{partner.name}</h2>
                                     </div>

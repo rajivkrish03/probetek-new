@@ -22,7 +22,7 @@ export default function Home() {
         ],
         contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+971-55-1234567',
+            telephone: '+971-58-5823253',
             contactType: 'customer service',
             areaServed: 'AE',
             availableLanguage: 'en',
