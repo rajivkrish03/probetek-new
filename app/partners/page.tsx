@@ -15,7 +15,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Our Partners | Probetek Engineering',
-    description: 'We partner with industry leaders like NGI, Sanwood, and Ponovo to bring world-class engineering technology to the UAE.',
+    description: 'We partner with industry leaders like NGI, Sanwood, Ponovo, and PE Module to bring world-class engineering technology to the UAE.',
     alternates: {
         canonical: 'https://probetek.ae/partners',
     },
