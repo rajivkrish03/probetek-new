@@ -49,7 +49,6 @@ export default function Applications() {
                         {applications.map((app, index) => (
                             <div key={index} className={styles.card}>
                                 <h2>{app}</h2>
-                                <p>Advanced testing and validation for {app.toLowerCase()}.</p>
                             </div>
                         ))}
                     </div>

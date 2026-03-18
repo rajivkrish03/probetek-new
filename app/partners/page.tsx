@@ -5,7 +5,7 @@ import Image from 'next/image';
 const partners = [
     { name: 'NGI TECHNOLOGIES COMPANY LIMITED', logo: '/probetek/partners/ngi.webp', link: 'https://www.ngi-tech.com/', darkBg: true },
     { name: 'PEModule', logo: '/probetek/partners/pemodule.png', link: 'https://www.pemodule.com/', darkBg: true },
-    { name: 'EDIBON', logo: '/probetek/partners/edibon.png', link: 'https://www.edibon.com/en/', darkBg: false },
+    { name: 'EDIBON', logo: '', link: 'https://www.edibon.com/en/', darkBg: false },
     { name: 'SANWOOD', logo: '/probetek/partners/sanwood.png', link: 'https://www.sanwood.cc/', darkBg: true },
     { name: 'PONOVO', logo: '/probetek/partners/ponovo.png', link: 'https://www.ponovo.net/', darkBg: true },
 ];
@@ -41,14 +41,18 @@ export default function Partners() {
                                 <a href={partner.link} target="_blank" rel="noopener noreferrer" className={styles.cardLink}>
                                     <div className={styles.card}>
                                         <div className={`${styles.logoContainer} ${partner.darkBg ? styles.darkBg : ''}`}>
-                                            <Image
-                                                src={partner.logo}
-                                                alt={`${partner.name} Corporate Logo`}
-                                                width={200}
-                                                height={100}
-                                                className={styles.logo}
-                                                style={{ objectFit: 'contain' }}
-                                            />
+                                            {partner.logo ? (
+                                                <Image
+                                                    src={partner.logo}
+                                                    alt={`${partner.name} Corporate Logo`}
+                                                    width={200}
+                                                    height={100}
+                                                    className={styles.logo}
+                                                    style={{ objectFit: 'contain' }}
+                                                />
+                                            ) : (
+                                                <span style={{ fontSize: '2rem', fontWeight: 'bold', color: 'inherit' }}>{partner.name}</span>
+                                            )}
                                         </div>
                                         <h2 className={styles.partnerName}>{partner.name}</h2>
                                     </div>
