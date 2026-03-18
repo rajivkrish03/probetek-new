@@ -53,53 +53,51 @@ export default function Company() {
                             <p>We specialize in five key technology domains, offering comprehensive sales, support, and consultancy:</p>
                             <div className={styles.expertiseGrid}>
                                 <div className={styles.expertiseCard}>
-                                    <h3>Power Electronics Test Solutions</h3>
-                                    <p>Advanced testing for the electric future. Partnering with <strong>NGI Technologies</strong>, we provide:</p>
+                                    <h3>Education & Training Equipments</h3>
+                                    <p>Comprehensive educational tools and training systems for engineering disciplines. Featuring solutions from <strong>PE Module</strong> and <strong>Edibon</strong> for:</p>
                                     <ul>
-                                        <li>AC/DC Power Supplies & Electronic Loads</li>
-                                        <li>Battery Simulators & Supercapacitor Testers</li>
-                                        <li>Fuel Cell Test Systems</li>
-                                        <li>Regenerative Power Solutions</li>
+                                        <li>Power Electronics Training Kits</li>
+                                        <li>Physics & Electronics Educational Modules</li>
+                                        <li>Mechanics, Fluid Mechanics & Thermodynamics</li>
+                                        <li>Process Control & Mechatronics</li>
                                     </ul>
                                 </div>
                                 <div className={styles.expertiseCard}>
-                                    <h3>Environmental Climatic Testing</h3>
+                                    <h3>Research & Test Solutions</h3>
+                                    <p>Advanced testing and research solutions for validating and simulating systems. Partnering with <strong>NGI</strong>, <strong>Ponovo</strong>, and <strong>PE Module</strong> for:</p>
+                                    <ul>
+                                        <li>Power Electronics Test Solutions</li>
+                                        <li>Power System Protection & IEC61850 Testing</li>
+                                        <li>Power Electronics Research Products</li>
+                                        <li>Hardware-In-the-Loop (HIL) & Real-Time Simulation</li>
+                                    </ul>
+                                </div>
+                                <div className={styles.expertiseCard}>
+                                    <h3>Environmental Test Solutions</h3>
                                     <p>Simulating real-world conditions for product validation. With <strong>Sanwood</strong>, we offer:</p>
                                     <ul>
-                                        <li>Temperature & Humidity Chambers</li>
+                                        <li>Temperature & Humidity Test Chambers</li>
                                         <li>Thermal Shock & Rapid Change Chambers</li>
-                                        <li>Battery Explosion-Proof Test Chambers</li>
-                                        <li>Dust, Rain, and UV Aging Chambers</li>
+                                        <li>UV Accelerated Aging & Xenon Test Chambers</li>
+                                        <li>Vibration, Altitude, & Sand Dust Testing</li>
                                     </ul>
                                 </div>
                                 <div className={styles.expertiseCard}>
-                                    <h3>Power System Protection</h3>
-                                    <p>Critical testing for grid stability and safety. Featuring <strong>Ponovo</strong> technology for:</p>
+                                    <h3>Pilot Plants</h3>
+                                    <p>Advanced scalable systems for research and industrial applications. We provide:</p>
                                     <ul>
-                                        <li>IEC61850 Digital Substation Testing</li>
-                                        <li>Relay Protection & Primary Injection Testing</li>
-                                        <li>EV Charging Station Testing</li>
-                                        <li>HVDC & Railway Power Testing</li>
+                                        <li>Customized Pilot Plants for Process Engineering</li>
+                                        <li>Chemical Industry Research Systems</li>
+                                        <li>Hands-on Scalable Environmental Tech</li>
                                     </ul>
                                 </div>
                                 <div className={styles.expertiseCard}>
-                                    <h3>Power Electronics Research Products</h3>
-                                    <p>Empowering breakthrough research. In partnership with <strong>PE Module</strong>, we provide:</p>
+                                    <h3>Oil & Gas Industry</h3>
+                                    <p>Specialized explosion-proof solutions for hazardous environments in the energy sector. We offer:</p>
                                     <ul>
-                                        <li>PLUGY HP Power Modules & Control Boards</li>
-                                        <li>Modular Converters (Buck, Boost, Inverters)</li>
-                                        <li>Micro-grid Research Systems</li>
-                                        <li>Customizable R&D Test Benches</li>
-                                    </ul>
-                                </div>
-                                <div className={styles.expertiseCard}>
-                                    <h3>Power Electronics Educational Products</h3>
-                                    <p>Building future engineering talent. Dedicated educational tools from <strong>PE Module</strong>:</p>
-                                    <ul>
-                                        <li>Integrated Power Electronics Training Kits</li>
-                                        <li>Modular Educational Discovery Systems</li>
-                                        <li>Hands-on Curriculum Support</li>
-                                        <li>Safe, Industry-aligned Learning Platforms</li>
+                                        <li>Ex-proof Battery Monitoring Systems</li>
+                                        <li>Ex-proof Lighting Systems</li>
+                                        <li>Hazardous Area Safety Solutions</li>
                                     </ul>
                                 </div>
                             </div>
