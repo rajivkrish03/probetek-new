@@ -55,17 +55,35 @@ export default function ProductSearch() {
                 });
             }
 
-            // Check if individual products match
-            category.items.forEach((item) => {
-                if (item.name.toLowerCase().includes(lowerQuery)) {
-                    newResults.push({
-                        type: 'product',
-                        name: item.name,
-                        link: item.link,
-                        categoryName: category.category,
+            // Check if individual products match in direct items
+            if (category.items) {
+                category.items.forEach((item) => {
+                    if (item.name.toLowerCase().includes(lowerQuery)) {
+                        newResults.push({
+                            type: 'product',
+                            name: item.name,
+                            link: item.link,
+                            categoryName: category.category,
+                        });
+                    }
+                });
+            }
+
+            // Check if individual products match in subcategories
+            if (category.subCategories) {
+                category.subCategories.forEach((sub) => {
+                    sub.items.forEach((item) => {
+                        if (item.name.toLowerCase().includes(lowerQuery)) {
+                            newResults.push({
+                                type: 'product',
+                                name: item.name,
+                                link: item.link,
+                                categoryName: `${category.category} > ${sub.name}`,
+                            });
+                        }
                     });
-                }
-            });
+                });
+            }
         });
 
         setResults(newResults);

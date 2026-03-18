@@ -1,40 +1,49 @@
-import { productsData, getProductCategory, type ProductCategory } from '../data';
-import styles from '../page.module.css';
+import { productsData, getProductCategory, getProductSubCategory } from '../../data';
+import styles from '../../page.module.css';
 import FadeIn from '@/components/FadeIn';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
-// Required for static site generation (output: 'export')
 export function generateStaticParams() {
-    return productsData.map((category) => ({
-        categoryId: category.id,
-    }));
+    const params: { categoryId: string; subCategoryId: string }[] = [];
+    productsData.forEach((category) => {
+        if (category.subCategories) {
+            category.subCategories.forEach((sub) => {
+                params.push({ categoryId: category.id, subCategoryId: sub.id });
+            });
+        }
+    });
+    return params;
 }
 
 type Props = {
-    params: Promise<{ categoryId: string }>;
+    params: Promise<{ categoryId: string; subCategoryId: string }>;
 };
 
 export async function generateMetadata({ params }: Props) {
-    const { categoryId } = await params;
+    const { categoryId, subCategoryId } = await params;
     const category = getProductCategory(categoryId);
-    if (!category) return { title: 'Not Found' };
+    const subCategory = getProductSubCategory(categoryId, subCategoryId);
+
+    if (!category || !subCategory) return { title: 'Not Found' };
 
     return {
-        title: `${category.category} | Probetek Engineering`,
-        description: category.description,
+        title: `${subCategory.name} | ${category.category} | Probetek Engineering`,
+        description: subCategory.description || category.description,
     };
 }
 
-export default async function CategoryPage({ params }: Props) {
-    const { categoryId } = await params;
-    const categoryData: ProductCategory | undefined = getProductCategory(categoryId);
+export default async function SubCategoryPage({ params }: Props) {
+    const { categoryId, subCategoryId } = await params;
+    const categoryData = getProductCategory(categoryId);
+    const subCategoryData = getProductSubCategory(categoryId, subCategoryId);
 
-    if (!categoryData) {
+    if (!categoryData || !subCategoryData) {
         notFound();
     }
 
-    const { category, description, items, subCategories } = categoryData;
+    const { category, icon } = categoryData;
+    const { name: subCategoryName, description, items } = subCategoryData;
 
     const jsonLd = {
         '@context': 'https://schema.org',
@@ -57,6 +66,12 @@ export default async function CategoryPage({ params }: Props) {
                 position: 3,
                 name: category,
                 item: `https://probetek.ae/products/${categoryId}`
+            },
+            {
+                '@type': 'ListItem',
+                position: 4,
+                name: subCategoryName,
+                item: `https://probetek.ae/products/${categoryId}/${subCategoryId}`
             }
         ]
     };
@@ -71,34 +86,20 @@ export default async function CategoryPage({ params }: Props) {
                 <div className={styles.container}>
                     <FadeIn>
                         <div className={styles.breadcrumb}>
-                            <Link href="/products" className={styles.backLink}>&larr; Back to all categories</Link>
+                            <Link href={`/products/${categoryId}`} className={styles.backLink}>&larr; Back to {category}</Link>
                         </div>
                         <h1 className={styles.categoryPageTitle}>
-                            <span className={styles.titleIcon}>{categoryData.icon}</span>
-                            {category}
+                            <span className={styles.titleIcon}>{icon}</span>
+                            {subCategoryName}
                         </h1>
-                        <p className={styles.categoryPageDesc}>{description}</p>
+                        <p className={styles.categoryPageDesc}>{description || `Explore our range of ${subCategoryName} solutions.`}</p>
                     </FadeIn>
                 </div>
             </section>
 
             <div className={styles.container}>
                 <section className={styles.categorySection}>
-                    {subCategories && subCategories.length > 0 ? (
-                        <div className={styles.categoryBlocksGrid}>
-                            {subCategories.map((sub, index) => (
-                                <FadeIn key={sub.id} delay={index * 0.08}>
-                                    <Link href={`/products/${categoryId}/${sub.id}`} className={styles.categoryBlock}>
-                                        <h2 className={styles.categoryBlockTitle}>{sub.name}</h2>
-                                        {sub.description && <p className={styles.categoryBlockDesc}>{sub.description}</p>}
-                                        <span className={styles.categoryBlockArrow}>
-                                            View Products &rarr;
-                                        </span>
-                                    </Link>
-                                </FadeIn>
-                            ))}
-                        </div>
-                    ) : items && items.length > 0 ? (
+                    {items && items.length > 0 ? (
                         <div className={styles.grid}>
                             {items.map((item, index) => (
                                 <FadeIn key={index} delay={index * 0.05}>
