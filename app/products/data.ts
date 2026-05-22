@@ -62,7 +62,7 @@ export const productsData: ProductCategory[] = [
                     { name: 'Fuel Cell Test Systems', link: 'https://www.ngi-tech.com/Fuel-cell-test-series' },
                     { name: 'Supercapacitor and Battery Test Systems', link: 'https://www.ngi-tech.com/Supercapacitor-and-battery-test-series' },
                     { name: 'Modular Instruments (DAQ)', link: 'https://www.ngi-tech.com/Data-acquisition-and-measurement407' },
-                    { name: 'AC Power Source / Power Amplifier', link: 'https://probetek.ae/contact' },
+                    { name: 'AC Power Source / Power Amplifier', link: 'https://www.ngi-tech.com/Power-grid-simulator/n75500-series-high-performance-regenerative-grid-simulator?_gl=1*ol4cjs*_up*MQ..*_gs*Z29vZ2xl&gclid=Cj0KCQjw_b_QBhCSARIsAP6hR4eDmN3uLs2En0ZNSavxeA5-dlIpLlY9qKKi6zBCCCfQbfhcbdy9p-gaAs6JEALw_wcB&gbraid=0AAAAABMLPHds_Un-I7IC4U1wRVEywQhN5' },
                     { name: 'Regenerative / Bidirectional Power Supply', link: 'https://probetek.ae/contact' },
                     { name: 'Regenerative AC/DC Load', link: 'https://probetek.ae/contact' },
                     { name: 'Automatic Test System (ATS)', link: 'https://probetek.ae/contact' },
