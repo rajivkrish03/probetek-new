@@ -1,0 +1,41 @@
+name: Deploy Sanity Studio
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - feature/sanity-cms-integration
+    paths:
+      - "studio/**"
+      - ".github/workflows/deploy-sanity-studio.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sanity-studio-deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Build and deploy hosted Sanity Studio
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: studio
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install Studio dependencies
+        run: npm install
+
+      - name: Build and deploy Studio to Sanity
+        env:
+          SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
+        run: npx sanity@latest deploy --url probetek-marketing --yes --schema-required
