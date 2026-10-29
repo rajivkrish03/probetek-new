@@ -10,7 +10,8 @@
   "dependencies": {
     "sanity": "^6.21.0",
     "react": "^19.2.2",
-    "react-dom": "^19.2.2"
+    "react-dom": "^19.2.2",
+    "styled-components": "^6.1.19"
   },
   "devDependencies": {
     "@types/react": "^19.2.2",
