@@ -73,6 +73,19 @@
     box-shadow: var(--glass-shadow);
 }
 
+.articleLink {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
+.articleLink:focus-visible,
+.readMore:focus-visible {
+    outline: 3px solid var(--brand-teal);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
 .articleImage {
     display: block;
     width: calc(100% + 3rem);
@@ -85,6 +98,7 @@
 .articleCard h2 {
     margin: 0.5rem 0;
     color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 .articleCard p {
@@ -104,9 +118,16 @@
     font-size: 0.9rem;
 }
 
-.articleCard a {
+.readMore {
     display: inline-block;
     margin-top: 0.5rem;
     color: var(--primary-color);
-    font-weight: 600;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.readMore:hover,
+.readMore:focus-visible,
+.articleLink:hover h2 {
+    text-decoration: underline;
 }
