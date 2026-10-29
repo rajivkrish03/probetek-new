@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import FadeIn from '@/components/FadeIn';
 import { getNewsArticles } from '@/lib/sanity';
 import styles from './page.module.css';
@@ -21,13 +22,15 @@ export default async function NewsEvents() {
                         <div className={styles.articles}>
                             {articles.map((article) => (
                                 <article className={styles.articleCard} key={article._id}>
-                                    {article.imageUrl ? (
-                                        // Sanity image URLs are public asset URLs returned by the dataset.
-                                        // eslint-disable-next-line @next/next/no-img-element
-                                        <img className={styles.articleImage} src={article.imageUrl} alt="" loading="lazy" />
-                                    ) : null}
-                                    {article.category ? <p className={styles.category}>{article.category}</p> : null}
-                                    <h2>{article.title}</h2>
+                                    <Link className={styles.articleLink} href={`/news-events/${article.slug}/`} aria-label={`Read ${article.title}`}>
+                                        {article.imageUrl ? (
+                                            // Sanity image URLs are public asset URLs returned by the dataset.
+                                            // eslint-disable-next-line @next/next/no-img-element
+                                            <img className={styles.articleImage} src={article.imageUrl} alt={article.title} loading="lazy" />
+                                        ) : null}
+                                        {article.category ? <p className={styles.category}>{article.category}</p> : null}
+                                        <h2>{article.title}</h2>
+                                    </Link>
                                     {article.publishedAt ? (
                                         <p className={styles.date}>
                                             {new Date(article.publishedAt).toLocaleDateString('en-GB', {
@@ -36,9 +39,7 @@ export default async function NewsEvents() {
                                         </p>
                                     ) : null}
                                     {article.excerpt ? <p>{article.excerpt}</p> : null}
-                                    {article.externalUrl ? (
-                                        <a href={article.externalUrl} target="_blank" rel="noopener noreferrer">Read more</a>
-                                    ) : null}
+                                    <Link className={styles.readMore} href={`/news-events/${article.slug}/`}>Read more <span aria-hidden="true">→</span></Link>
                                 </article>
                             ))}
                         </div>
