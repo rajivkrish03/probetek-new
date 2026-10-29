@@ -9,6 +9,11 @@ on:
   push:
     branches: ["main"]
 
+  # A Sanity publish webhook can request a rebuild of the current production branch.
+  # Configure a GitHub repository_dispatch webhook only after the feature branch is reviewed.
+  repository_dispatch:
+    types: [sanity-publish]
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
