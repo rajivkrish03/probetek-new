@@ -38,4 +38,4 @@ jobs:
       - name: Build and deploy Studio to Sanity
         env:
           SANITY_AUTH_TOKEN: ${{ secrets.SANITY_AUTH_TOKEN }}
-        run: npx sanity deploy --yes --schema-required --deployment-url probetek-marketing.sanity.studio
+        run: npx sanity deploy --yes --schema-required --url probetek-marketing.sanity.studio
