@@ -2,6 +2,14 @@ const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'hzyg8msu';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2025-02-19';
 
+export type ArticleBlock = {
+  _type?: string;
+  style?: string;
+  listItem?: string;
+  level?: number;
+  children?: Array<{ _type?: string; text?: string }>;
+};
+
 export type NewsArticle = {
   _id: string;
   title: string;
@@ -11,6 +19,7 @@ export type NewsArticle = {
   publishedAt?: string;
   externalUrl?: string;
   imageUrl?: string;
+  body?: ArticleBlock[];
 };
 
 function groqUrl(query: string) {
@@ -44,5 +53,31 @@ export async function getNewsArticles(): Promise<NewsArticle[]> {
   } catch (error) {
     console.error('Unable to load News & Events from Sanity during static build.', error);
     return [];
+  }
+}
+
+export async function getNewsArticleBySlug(slug: string): Promise<NewsArticle | null> {
+  const query = `*[_type == "newsArticle" && slug.current == ${JSON.stringify(slug)} && publishedAt <= now()][0] {
+    _id,
+    "title": title,
+    "slug": slug.current,
+    excerpt,
+    category,
+    publishedAt,
+    externalUrl,
+    "imageUrl": mainImage.asset->url,
+    body
+  }`;
+  try {
+    const response = await fetch(groqUrl(query), { next: { revalidate: false } });
+    if (!response.ok) {
+      console.error(`Sanity article query failed (${response.status}).`);
+      return null;
+    }
+    const payload = (await response.json()) as { result?: NewsArticle | null };
+    return payload.result ?? null;
+  } catch (error) {
+    console.error('Unable to load article from Sanity during static build.', error);
+    return null;
   }
 }
