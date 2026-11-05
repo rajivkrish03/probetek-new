@@ -115,6 +115,30 @@
     font-weight: 700;
 }
 
+.gallery {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.galleryPhoto {
+    margin: 0;
+}
+
+.galleryPhoto img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.galleryPhoto figcaption {
+    margin-top: 0.65rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
 @media (max-width: 600px) {
     .main {
         padding: 2rem 0.75rem 4rem;

@@ -54,6 +54,21 @@ export default async function NewsArticlePage({ params }: PageProps) {
                         return <p key={index}>{text}</p>;
                     })}
                 </div>
+                {article.gallery?.some((image) => image.url) ? (
+                    <section className={styles.gallery} aria-label="Article photos">
+                        {article.gallery.map((image, index) => image.url ? (
+                            <figure className={styles.galleryPhoto} key={image._key}>
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src={image.url}
+                                    alt={image.alt || image.caption || `${article.title} — photo ${index + 1}`}
+                                    loading="lazy"
+                                />
+                                {image.caption ? <figcaption>{image.caption}</figcaption> : null}
+                            </figure>
+                        ) : null)}
+                    </section>
+                ) : null}
                 {article.externalUrl ? (
                     <p className={styles.relatedLink}>
                         <a href={article.externalUrl} target="_blank" rel="noopener noreferrer">Visit related link ↗</a>

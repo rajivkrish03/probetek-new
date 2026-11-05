@@ -10,6 +10,13 @@ export type ArticleBlock = {
   children?: Array<{ _type?: string; text?: string }>;
 };
 
+export type NewsArticleImage = {
+  _key: string;
+  url?: string;
+  alt?: string;
+  caption?: string;
+};
+
 export type NewsArticle = {
   _id: string;
   title: string;
@@ -19,6 +26,7 @@ export type NewsArticle = {
   publishedAt?: string;
   externalUrl?: string;
   imageUrl?: string;
+  gallery?: NewsArticleImage[];
   body?: ArticleBlock[];
 };
 
@@ -40,7 +48,7 @@ export async function getNewsArticles(): Promise<NewsArticle[]> {
     category,
     publishedAt,
     externalUrl,
-    "imageUrl": mainImage.asset->url
+    "imageUrl": coalesce(mainImage.asset->url, gallery[0].asset->url)
   }`;
   try {
     const response = await fetch(groqUrl(query), { next: { revalidate: false } });
@@ -66,6 +74,7 @@ export async function getNewsArticleBySlug(slug: string): Promise<NewsArticle | 
     publishedAt,
     externalUrl,
     "imageUrl": mainImage.asset->url,
+    gallery[]{_key, alt, caption, "url": asset->url},
     body
   }`;
   try {
