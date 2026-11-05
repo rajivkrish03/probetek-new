@@ -1,14 +1,10 @@
+import type { PortableTextBlock } from '@portabletext/react';
+
 const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'hzyg8msu';
 const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production';
 const apiVersion = process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2025-02-19';
 
-export type ArticleBlock = {
-  _type?: string;
-  style?: string;
-  listItem?: string;
-  level?: number;
-  children?: Array<{ _type?: string; text?: string }>;
-};
+export type ArticleBlock = PortableTextBlock;
 
 export type NewsArticleImage = {
   _key: string;

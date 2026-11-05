@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { PortableText } from '@portabletext/react';
 import { notFound } from 'next/navigation';
 import { getNewsArticleBySlug, getNewsArticles } from '@/lib/sanity';
 import styles from './page.module.css';
@@ -8,10 +9,6 @@ type PageProps = { params: Promise<{ slug: string }> };
 export async function generateStaticParams() {
     const articles = await getNewsArticles();
     return articles.map((article) => ({ slug: article.slug }));
-}
-
-function blockText(block: { children?: Array<{ text?: string }> }) {
-    return (block.children ?? []).map((child) => child.text ?? '').join('');
 }
 
 export default async function NewsArticlePage({ params }: PageProps) {
@@ -39,20 +36,7 @@ export default async function NewsArticlePage({ params }: PageProps) {
                 ) : null}
                 {article.excerpt ? <p className={styles.excerpt}>{article.excerpt}</p> : null}
                 <div className={styles.body}>
-                    {(article.body ?? []).map((block, index) => {
-                        if (block._type !== 'block') return null;
-                        const text = blockText(block);
-                        if (!text.trim()) return null;
-
-                        if (block.listItem) {
-                            const ItemTag = block.listItem === 'number' ? 'ol' : 'ul';
-                            return <ItemTag key={index}><li>{text}</li></ItemTag>;
-                        }
-                        if (block.style === 'h2') return <h2 key={index}>{text}</h2>;
-                        if (block.style === 'h3') return <h3 key={index}>{text}</h3>;
-                        if (block.style === 'blockquote') return <blockquote key={index}>{text}</blockquote>;
-                        return <p key={index}>{text}</p>;
-                    })}
+                    <PortableText value={article.body ?? []} />
                 </div>
                 {article.gallery?.some((image) => image.url) ? (
                     <section className={styles.gallery} aria-label="Article photos">

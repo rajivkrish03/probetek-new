@@ -76,6 +76,10 @@ jobs:
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
+      - name: Refresh CMS content cache
+        # Re-fetch published Sanity content on every build, including webhook rebuilds.
+        # Keep the compiler cache while discarding indefinitely cached API responses.
+        run: rm -rf .next/cache/fetch-cache
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
