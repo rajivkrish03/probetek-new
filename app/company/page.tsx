@@ -50,8 +50,18 @@ export default function Company() {
                     <FadeIn delay={0.1}>
                         <div className={styles.section}>
                             <h2>Our Core Expertise</h2>
-                            <p>We specialize in five key technology domains, offering comprehensive sales, support, and consultancy:</p>
+                            <p>We specialize in six key technology domains, offering comprehensive sales, support, and consultancy:</p>
                             <div className={styles.expertiseGrid}>
+                                <div className={styles.expertiseCard}>
+                                    <h3>Aircraft Warning Lights &amp; Monitoring</h3>
+                                    <p>Lighting and monitoring solutions from <strong>Clampco Sistemi</strong> for aviation safety and infrastructure:</p>
+                                    <ul>
+                                        <li>Aircraft Warning &amp; Explosion-Proof Obstruction Lights</li>
+                                        <li>Heliport, Vertiport &amp; Solar Powered Lighting</li>
+                                        <li>Power Line Warning Lights &amp; Overhead Line Monitoring</li>
+                                        <li>Retractable Maintenance &amp; Telemetry Monitoring Systems</li>
+                                    </ul>
+                                </div>
                                 <div className={styles.expertiseCard}>
                                     <h3>Education & Training Equipments</h3>
                                     <p>Comprehensive educational tools and training systems for engineering disciplines. Featuring solutions from <strong>PE Module</strong> and <strong>Edibon</strong> for:</p>
@@ -110,7 +120,7 @@ export default function Company() {
                             <div className={styles.valuesGrid}>
                                 <div className={styles.valueCard}>
                                     <h3>Global Partnerships</h3>
-                                    <p>We represent industry leaders like <strong>NGI, Edibon, Sanwood, Ponovo, and PE Module</strong>, bringing world-class technology to your doorstep.</p>
+                                    <p>We represent industry leaders like <strong>Clampco, NGI, Edibon, Sanwood, Ponovo, and PE Module</strong>, bringing world-class technology to your doorstep.</p>
                                 </div>
                                 <div className={styles.valueCard}>
                                     <h3>Local Expertise</h3>

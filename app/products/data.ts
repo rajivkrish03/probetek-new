@@ -22,6 +22,23 @@ export type ProductCategory = {
 
 export const productsData: ProductCategory[] = [
     {
+        category: 'Aircraft Warning Lights (Obstruction Lights)',
+        id: 'aircraft-warning-lights',
+        icon: '✈️',
+        description: 'Clampco aircraft warning lights, heliport and vertiport lighting, solar powered obstruction lights, and overhead line monitoring solutions.',
+        items: [
+            { name: 'Aircraft Warning Lights for Explosion-Proof Areas', link: 'https://clampco.it/aircraft-warning-lights-for-explosion-proof/' },
+            { name: 'Aircraft Warning Lights', link: 'https://clampco.it/aircraft-warning-lights/' },
+            { name: 'Lights for Heliports', link: 'https://clampco.it/lights-for-heliports/' },
+            { name: 'Lights for Vertiports', link: 'https://clampco.it/lights-for-vertiports/' },
+            { name: 'Aircraft Warning Lights for Power Lines', link: 'https://clampco.it/aircraft-warning-lights-for-power-lines/' },
+            { name: 'Solar Powered Obstruction Lights', link: 'https://clampco.it/solar-powered-obstruction-lights/' },
+            { name: 'Overhead Line Monitoring Solution', link: 'https://clampco.it/mol-open-sensor-for-overhead-line-monitoring/' },
+            { name: 'Retractable: Maintenance Solution', link: 'https://clampco.it/retractable-lighting-maintenance-solution/' },
+            { name: 'Telemetry: Monitoring Solution', link: 'https://clampco.it/telemetry-lighting-monitoring-system/' },
+        ],
+    },
+    {
         category: 'Education & Training',
         id: 'education-training',
         icon: '🎓',

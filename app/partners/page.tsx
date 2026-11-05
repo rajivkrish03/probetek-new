@@ -3,6 +3,7 @@ import FadeIn from '@/components/FadeIn';
 import Image from 'next/image';
 
 const partners = [
+    { name: 'CLAMPCO SISTEMI', logo: '/probetek/partners/clampco.png', link: 'https://clampco.it/', darkBg: false },
     { name: 'NGI TECHNOLOGIES COMPANY LIMITED', logo: '/probetek/partners/ngi.webp', link: 'https://www.ngi-tech.com/', darkBg: true },
     { name: 'PEModule', logo: '/probetek/partners/pemodule.png', link: 'https://www.pemodule.com/', darkBg: true },
     { name: 'EDIBON', logo: '/probetek/partners/edibon.jpg', link: 'https://www.edibon.com/en/', darkBg: false },
@@ -15,7 +16,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
     title: 'Our Partners | Probetek Engineering',
-    description: 'We partner with industry leaders like NGI, Sanwood, Ponovo, and PE Module to bring world-class engineering technology to the UAE.',
+    description: 'We partner with industry leaders like Clampco, NGI, Edibon, Sanwood, Ponovo, and PE Module to bring world-class engineering technology to the UAE.',
     alternates: {
         canonical: 'https://probetek.ae/partners',
     },
