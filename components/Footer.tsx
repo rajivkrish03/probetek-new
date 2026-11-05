@@ -22,7 +22,8 @@ export default function Footer() {
                 </div>
                 <div className={styles.column}>
                     <h3>Contact Us</h3>
-                    <p>Sultan Bin Zayed 1st street</p>
+                    <p>Office M2, Building 10</p>
+                    <p>Al Nahyan Camp Tower,</p>
                     <p>Abu Dhabi, UAE</p>
                     <p>T: +971 26265664</p>
                     <p>M: +971 585823253</p>
