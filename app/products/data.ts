@@ -16,6 +16,7 @@ export type ProductCategory = {
     category: string;
     icon: string;
     description: string;
+    longDescription?: string;
     subCategories?: ProductSubCategory[];
     items?: ProductItem[];
 };
@@ -26,6 +27,7 @@ export const productsData: ProductCategory[] = [
         id: 'aircraft-warning-lights',
         icon: '✈️',
         description: 'Clampco aircraft warning lights, heliport and vertiport lighting, solar powered obstruction lights, and overhead line monitoring solutions.',
+        longDescription: "Clampco Sistemi specializes in the design and manufacture of advanced obstruction lighting solutions, with a strong focus on the Oil & Gas industry. Its solutions are engineered to enhance aviation safety and visibility for industrial chimneys, flare stacks, high-rise structures, and other critical installations within oil & gas facilities. With expertise spanning telecommunications, broadcasting, infrastructure, construction, heliports, and specialized industrial applications, Clampco Sistemi delivers reliable obstruction lighting systems tailored to demanding operational environments.",
         items: [
             { name: 'Aircraft Warning Lights for Explosion-Proof Areas', link: 'https://clampco.it/aircraft-warning-lights-for-explosion-proof/' },
             { name: 'Aircraft Warning Lights', link: 'https://clampco.it/aircraft-warning-lights/' },

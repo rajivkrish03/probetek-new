@@ -77,7 +77,7 @@ export default async function CategoryPage({ params }: Props) {
                             <span className={styles.titleIcon}>{categoryData.icon}</span>
                             {category}
                         </h1>
-                        <p className={styles.categoryPageDesc}>{description}</p>
+                        <p className={styles.categoryPageDesc}>{categoryData.longDescription ?? description}</p>
                     </FadeIn>
                 </div>
             </section>
