@@ -1,44 +1,12 @@
 import Link from 'next/link';
-import { FaLinkedin, FaInstagram, FaYoutube, FaXTwitter } from 'react-icons/fa6';
+import Image from 'next/image';
+import { PiArrowUpRight } from 'react-icons/pi';
 import styles from './Footer.module.css';
 
 export default function Footer() {
-    return (
-        <footer className={styles.footer}>
-            <div className={styles.container}>
-                <div className={styles.column}>
-                    <h3>PROBETEK ENGINEERING</h3>
-                    <p>Professional products, expert services, and cutting-edge solutions.</p>
-                </div>
-                <div className={styles.column}>
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><Link href="/company">Company</Link></li>
-                        <li><Link href="/products">Products</Link></li>
-                        <li><Link href="/contact">Contact</Link></li>
-                        <li><Link href="/careers">Careers</Link></li>
-                        <li><Link href="/news-events">News & Events</Link></li>
-                    </ul>
-                </div>
-                <div className={styles.column}>
-                    <h3>Contact Us</h3>
-                    <p>Office M2, Building 10</p>
-                    <p>Al Nahyan Camp Tower,</p>
-                    <p>Abu Dhabi, UAE</p>
-                    <p>T: +971 26265664</p>
-                    <p>M: +971 585823253</p>
-                    <p>Email: info@probetek.ae</p>
-                </div>
-                <div className={styles.social}>
-                    <h3>FOLLOW US</h3>
-                    <div className={styles.socialIcons}>
-                        <a href="https://www.linkedin.com/company/probetek/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><FaLinkedin /></a>
-                    </div>
-                </div>
-            </div>
-            <div className={styles.bottom}>
-                <p>&copy; 2025 PROBETEK ENGINEERING. All rights reserved.</p>
-            </div>
-        </footer>
-    );
+    return <footer className={styles.footer}><div className={styles.container}>
+        <div className={styles.brand}><Link href="/" aria-label="Probetek Engineering home"><Image src="/probetek/logo.png" alt="Probetek Engineering" width={658} height={278} sizes="180px" /></Link><p>Specialist technology.<br />Practical engineering support.<br />Here in the UAE.</p><a href="https://www.linkedin.com/company/probetek/" target="_blank" rel="noopener noreferrer" className={styles.linkedin}>Connect on LinkedIn <PiArrowUpRight aria-hidden="true" /></a></div>
+        <div className={styles.navigation}><h2>Explore Probetek</h2><ul><li><Link href="/products">Equipment &amp; solutions</Link></li><li><Link href="/services">Engineering services</Link></li><li><Link href="/partners">Our technology partners</Link></li><li><Link href="/company">About Probetek</Link></li><li><Link href="/news-events">News &amp; insights</Link></li><li><Link href="/careers">Careers</Link></li></ul></div>
+        <div className={styles.contact}><h2>Let’s talk about your project</h2><a className={styles.email} href="mailto:info@probetek.ae">info@probetek.ae <PiArrowUpRight aria-hidden="true" /></a><a href="tel:+97126265664">+971 2 626 5664</a><address>Office M2, Building 10<br />Al Nahyan Camp Tower<br />Abu Dhabi, UAE</address><Link href="/contact" className={styles.contactLink}>Contact our team <PiArrowUpRight aria-hidden="true" /></Link></div>
+    </div><div className={styles.bottom}><span>© {new Date().getFullYear()} Probetek Engineering. All rights reserved.</span><span>Abu Dhabi, United Arab Emirates</span></div></footer>;
 }

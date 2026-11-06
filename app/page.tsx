@@ -1,9 +1,10 @@
 import Hero from '@/components/Hero';
 import ProductCategories from '@/components/ProductCategories';
+import { HomePartners, HomeSupport, HomeAbout, HomeFAQ, HomeContact } from '@/components/HomepageSections';
 
 
 export const metadata = {
-    title: 'Probetek Engineering | Leading Engineering Solutions in UAE',
+    title: 'Research, Testing & Engineering Solutions in UAE',
     description: 'Probetek Engineering provides advanced academic and industrial research equipment, power electronics test solutions, and environmental chambers in Abu Dhabi, UAE.',
     alternates: {
         canonical: 'https://probetek.ae',
@@ -30,13 +31,18 @@ export default function Home() {
     }
 
     return (
-        <main>
+        <main className="home">
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
             <Hero />
+            <HomePartners />
             <ProductCategories />
+            <HomeSupport />
+            <HomeAbout />
+            <HomeFAQ />
+            <HomeContact />
         </main>
     )
 }

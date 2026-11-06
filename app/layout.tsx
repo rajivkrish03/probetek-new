@@ -1,11 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Manrope } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Script from 'next/script'
 
-const montserrat = Montserrat({ subsets: ['latin'] })
+const manrope = Manrope({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://probetek.ae'),
@@ -76,7 +76,7 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="en" suppressHydrationWarning>
+        <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
             <head>
                 <Script
                     src="https://www.googletagmanager.com/gtag/js?id=G-JRFF0K40RS"
@@ -92,9 +92,10 @@ export default function RootLayout({
                     `}
                 </Script>
             </head>
-            <body className={montserrat.className}>
+            <body className={manrope.className}>
+                <a href="#main-content" className="skipLink">Skip to content</a>
                 <Navbar />
-                {children}
+                <div id="main-content" tabIndex={-1}>{children}</div>
                 <Footer />
                 {/* Floating WhatsApp Button */}
                 <a
