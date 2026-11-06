@@ -23,24 +23,6 @@ export type ProductCategory = {
 
 export const productsData: ProductCategory[] = [
     {
-        category: 'Aircraft Warning Lights (Obstruction Lights)',
-        id: 'aircraft-warning-lights',
-        icon: '✈️',
-        description: 'Clampco aircraft warning lights, heliport and vertiport lighting, solar powered obstruction lights, and overhead line monitoring solutions.',
-        longDescription: "Clampco Sistemi specializes in the design and manufacture of advanced obstruction lighting solutions, with a strong focus on the Oil & Gas industry. Its solutions are engineered to enhance aviation safety and visibility for industrial chimneys, flare stacks, high-rise structures, and other critical installations within oil & gas facilities. With expertise spanning telecommunications, broadcasting, infrastructure, construction, heliports, and specialized industrial applications, Clampco Sistemi delivers reliable obstruction lighting systems tailored to demanding operational environments.",
-        items: [
-            { name: 'Aircraft Warning Lights for Explosion-Proof Areas', link: 'https://clampco.it/aircraft-warning-lights-for-explosion-proof/' },
-            { name: 'Aircraft Warning Lights', link: 'https://clampco.it/aircraft-warning-lights/' },
-            { name: 'Lights for Heliports', link: 'https://clampco.it/lights-for-heliports/' },
-            { name: 'Lights for Vertiports', link: 'https://clampco.it/lights-for-vertiports/' },
-            { name: 'Aircraft Warning Lights for Power Lines', link: 'https://clampco.it/aircraft-warning-lights-for-power-lines/' },
-            { name: 'Solar Powered Obstruction Lights', link: 'https://clampco.it/solar-powered-obstruction-lights/' },
-            { name: 'Overhead Line Monitoring Solution', link: 'https://clampco.it/mol-open-sensor-for-overhead-line-monitoring/' },
-            { name: 'Retractable: Maintenance Solution', link: 'https://clampco.it/retractable-lighting-maintenance-solution/' },
-            { name: 'Telemetry: Monitoring Solution', link: 'https://clampco.it/telemetry-lighting-monitoring-system/' },
-        ],
-    },
-    {
         category: 'Education & Training',
         id: 'education-training',
         icon: '🎓',
@@ -156,7 +138,7 @@ export const productsData: ProductCategory[] = [
         description: 'Specialized explosion-proof solutions for hazardous environments in the oil and gas sector.',
         items: [
             { name: 'Ex-proof Battery Monitoring System', link: 'https://probetek.ae/contact' },
-            { name: 'Ex-proof Lighting System', link: 'https://probetek.ae/contact' },
+            { name: 'Ex-proof Lighting System', link: 'https://clampco.it/aircraft-warning-lights-for-explosion-proof/' },
         ],
     }
 ];
