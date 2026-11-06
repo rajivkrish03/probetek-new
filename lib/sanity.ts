@@ -36,7 +36,7 @@ function groqUrl(query: string) {
  * never expose a Sanity write token in a public website build.
  */
 export async function getNewsArticles(): Promise<NewsArticle[]> {
-  const query = `*[_type == "newsArticle" && defined(slug.current)] | order(publishedAt desc) {
+  const query = `*[_type == "newsArticle" && defined(slug.current) && slug.current != "a-new-office-stronger-partnerships-probetek-welcomes-clampco-sistemi-during-adipec"] | order(publishedAt desc) {
     _id,
     "title": title,
     "slug": slug.current,
@@ -61,7 +61,7 @@ export async function getNewsArticles(): Promise<NewsArticle[]> {
 }
 
 export async function getNewsArticleBySlug(slug: string): Promise<NewsArticle | null> {
-  const query = `*[_type == "newsArticle" && slug.current == ${JSON.stringify(slug)}][0] {
+  const query = `*[_type == "newsArticle" && slug.current == ${JSON.stringify(slug)} && slug.current != "a-new-office-stronger-partnerships-probetek-welcomes-clampco-sistemi-during-adipec"][0] {
     _id,
     "title": title,
     "slug": slug.current,
