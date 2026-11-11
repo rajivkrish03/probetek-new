@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { Manrope } from 'next/font/google'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import Script from 'next/script'
+import AnalyticsConsent from '@/components/AnalyticsConsent'
 
 const manrope = Manrope({ subsets: ['latin'] })
 
@@ -77,26 +77,12 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" data-scroll-behavior="smooth" suppressHydrationWarning>
-            <head>
-                <Script
-                    src="https://www.googletagmanager.com/gtag/js?id=G-JRFF0K40RS"
-                    strategy="afterInteractive"
-                />
-                <Script id="google-analytics" strategy="afterInteractive">
-                    {`
-                        window.dataLayer = window.dataLayer || [];
-                        function gtag(){dataLayer.push(arguments);}
-                        gtag('js', new Date());
-
-                        gtag('config', 'G-JRFF0K40RS');
-                    `}
-                </Script>
-            </head>
             <body className={manrope.className}>
                 <a href="#main-content" className="skipLink">Skip to content</a>
                 <Navbar />
                 <div id="main-content" tabIndex={-1}>{children}</div>
                 <Footer />
+                <AnalyticsConsent />
                 {/* Floating WhatsApp Button */}
                 <a
                     href="https://wa.me/971585823253"
