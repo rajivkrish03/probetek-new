@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = { title: 'Privacy Policy | Probetek Engineering', description: 'How Probetek Engineering handles personal information submitted through our website.', alternates: { canonical: 'https://probetek.ae/privacy-policy' } };
+export const metadata: Metadata = { title: 'Privacy Policy', description: 'How Probetek Engineering handles personal information submitted through our website.', alternates: { canonical: 'https://probetek.ae/privacy-policy' } };
 
 export default function PrivacyPolicy() {
   return <main style={{maxWidth:850,margin:'0 auto',padding:'64px 24px',lineHeight:1.8}}>
@@ -16,7 +16,7 @@ export default function PrivacyPolicy() {
     <h2>Marketing</h2>
     <p>Our contact form includes an optional, unchecked choice for future product news and updates. We do not treat a business enquiry alone as consent to promotional messages. You may withdraw marketing consent by contacting us.</p>
     <h2>Service providers and transfers</h2>
-    <p>Our contact form currently uses Formspree to process submissions. We may receive the enquiries through our email service and store related business records in our systems. We also use Google Analytics for website measurement. These providers may process information outside the UAE. Please contact us if you have questions about where and how your enquiry is processed.</p>
+    <p>Contact form submissions are stored in our Supabase-hosted enquiry database and made available to authorised staff through our internal admin portal. The stored information includes your name, email address, subject, message, submission time, review status and whether you opted in to future product news and updates. Contact form submissions do not automatically send enquiry emails. We also use Google Analytics for website measurement where enabled. Our technology providers may process or store information outside the UAE. Contact us for more information about the processing and location of your enquiry data.</p>
     <h2>Retention and security</h2>
     <p>We retain personal information only for as long as reasonably necessary for the stated purposes, business recordkeeping, dispute handling and applicable legal requirements. We apply appropriate technical and organisational safeguards and restrict access to authorised personnel. For details of retention periods applicable to your enquiry, contact us at the address below.</p>
     <h2>Your privacy rights</h2>
