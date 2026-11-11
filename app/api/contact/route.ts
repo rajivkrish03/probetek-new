@@ -2,10 +2,11 @@ import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
 // Initialize Resend with API Key
-const resend = new Resend(process.env.RESEND_API_KEY);
+// Construct the client only when the route is called, not during Next.js build.
 
 export async function POST(request: Request) {
     if (!process.env.RESEND_API_KEY) return NextResponse.json({ success: false, message: 'Contact service not configured.' }, { status: 503 });
+    const resend = new Resend(process.env.RESEND_API_KEY);
     try {
         const formData = await request.formData();
         const name = formData.get('name') as string;
