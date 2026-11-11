@@ -63,7 +63,7 @@ const services = [
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Services | Probetek Engineering',
+    title: 'Engineering Services',
     description: 'Expert engineering services including installation, commissioning, maintenance, and laboratory relocation in Abu Dhabi, UAE.',
     alternates: {
         canonical: 'https://probetek.ae/services',
