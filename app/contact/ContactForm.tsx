@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, ChangeEvent, FormEvent } from 'react';
+import Link from 'next/link';
 import styles from './page.module.css';
 
 export default function ContactForm() {
@@ -11,6 +12,7 @@ export default function ContactForm() {
         message: '',
     });
 
+    const [marketingOptIn, setMarketingOptIn] = useState(false);
     const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -29,6 +31,8 @@ export default function ContactForm() {
         data.append('email', formData.email);
         data.append('subject', formData.subject);
         data.append('message', formData.message);
+        // Consent collection must be verified in Formspree before marketing begins.
+        data.append('marketing_opt_in', marketingOptIn ? 'yes' : 'no');
 
 
         try {
@@ -43,6 +47,7 @@ export default function ContactForm() {
             if (response.ok) {
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: '', message: '' });
+                setMarketingOptIn(false);
 
             } else {
                 const result = await response.json();
@@ -84,6 +89,11 @@ export default function ContactForm() {
                             <textarea id="message" name="message" rows={5} placeholder="Your Message" value={formData.message} onChange={handleChange} required></textarea>
                         </div>
 
+                        <p style={{fontSize:'0.875rem',lineHeight:1.6}}>We use your details to respond to your enquiry and manage related business correspondence. See our <Link href="/privacy-policy" style={{textDecoration:'underline'}}>Privacy Policy</Link>.</p>
+                        <label style={{display:'flex',alignItems:'flex-start',gap:'0.75rem',fontSize:'0.875rem',lineHeight:1.6}}>
+                          <input type="checkbox" checked={marketingOptIn} onChange={e => setMarketingOptIn(e.target.checked)} style={{marginTop:'0.3rem'}} />
+                          <span>Optional: I would like to receive future product news and updates from Probetek Engineering. I can unsubscribe at any time.</span>
+                        </label>
                         <button type="submit" className={styles.submitButton} disabled={status === 'submitting'}>
                             {status === 'submitting' ? 'Sending...' : 'Send Message'}
                         </button>
