@@ -4,7 +4,7 @@ import styles from './page.module.css';
 import ContactForm from './ContactForm';
 
 export const metadata: Metadata = {
-    title: 'Contact Us | Probetek Engineering',
+    title: 'Contact Us',
     description: 'Get in touch with Probetek Engineering for your academic and industrial research equipment needs in Abu Dhabi, UAE.',
     alternates: {
         canonical: 'https://probetek.ae/contact',
