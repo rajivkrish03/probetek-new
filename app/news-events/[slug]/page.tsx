@@ -4,6 +4,23 @@ import { notFound } from 'next/navigation';
 import { getNewsArticleBySlug, getNewsArticles } from '@/lib/sanity';
 import styles from './page.module.css';
 
+import type { Metadata } from 'next';
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { slug } = await params;
+    const article = await getNewsArticleBySlug(slug);
+    if (!article) return { title: 'Article not found', robots: { index: false } };
+    const title = article.title;
+    const description = article.excerpt || 'News and updates from Probetek Engineering.';
+    const canonical = `https://probetek.ae/news-events/${slug}`;
+    return {
+        title,
+        description,
+        alternates: { canonical },
+        openGraph: { title: `${title} | Probetek Engineering`, description, url: canonical, type: 'article' },
+    };
+}
+
 type PageProps = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
