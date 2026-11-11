@@ -17,8 +17,7 @@ export default function Contact() {
             <section className={styles.contactExperience}>
                 <div className={styles.container}>
                     <div className={styles.intro}>
-                        <p className={styles.eyebrow}>CONTACT PROBETEK ENGINEERING</p>
-                        <h1>Let&apos;s talk about <span>your next project.</span></h1>
+                        <h1>Let&apos;s talk about your next project.</h1>
                         <p className={styles.introText}>Whether you&apos;re sourcing specialist equipment, planning a test facility or exploring an engineering solution, our team is here to help.</p>
                     </div>
                     <div className={styles.contactGrid}>
